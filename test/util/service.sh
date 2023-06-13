@@ -32,7 +32,7 @@ verify_stopped() {
   container=$1
   run docker exec ${container} bash -c "ps aux | grep [f]aktory"
   echo_lines
-  [ "$status" -eq 1 ] 
+  [ "$status" -eq 1 ]
 }
 
 insert_test_data() {
@@ -71,10 +71,10 @@ verify_plan() {
   [ "${lines[0]}" = "{" ]
   [ "${lines[1]}" = "  \"redundant\": false," ]
   [ "${lines[2]}" = "  \"horizontal\": false," ]
-  [ "${lines[3]}" = "  \"user\": \"nanobox\"," ]
+  [ "${lines[3]}" = "  \"user\": \"microbox\"," ]
   [ "${lines[4]}" = "  \"users\": [" ]
   [ "${lines[5]}" = "    {" ]
-  [ "${lines[6]}" = "      \"username\": \"nanobox\"," ]
+  [ "${lines[6]}" = "      \"username\": \"microbox\"," ]
   [ "${lines[7]}" = "      \"meta\": {" ]
   [ "${lines[8]}" = "      }" ]
   [ "${lines[9]}" = "    }" ]
